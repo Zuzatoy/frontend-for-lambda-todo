@@ -1,0 +1,50 @@
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid#27742a;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 24px;
+  }
+  
+  .button5:hover {
+    background-color:#27742a;
+    color: white;
+  }
+
+  .lisa-form {
+      border: 2px dashed #27742a;
+      border-radius: 10px;
+      padding: 25px
+  }
+  
+  .lisa-form div {
+      display: flex;
+      width: 400px;
+      padding-bottom: 14px;
+  }
+  .lisa-form label {
+    flex-grow: 0;     /* do not grow   - initial value: 0 */
+    flex-shrink: 0;   /* do not shrink - initial value: 1 */
+    flex-basis: 230px;
+  }
+
+  .lisa-form input {
+    width: 100%;
+  }

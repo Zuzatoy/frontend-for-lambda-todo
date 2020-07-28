@@ -1,6 +1,7 @@
 {
   "name": "frontend-aws",
   "version": "0.1.0",
+  "proxy": "https://mb9rb1c19g.execute-api.ap-southeast-2.amazonaws.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
