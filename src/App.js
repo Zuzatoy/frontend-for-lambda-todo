@@ -1,32 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CandidateForm from './components/CandidateForm';
+import CandidatesList from './components/CandidatesList';
+import {BrowserRouter as Router , Route} from 'react-router-dom'
 import './App.css';
 
 function App() {
 
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch('https://mb9rb1c19g.execute-api.ap-southeast-2.amazonaws.com/dev/todos', {
-    method: "GET",
-    headers: {
-      "access-control-allow-origin" : "*",
-      "Content-type": "application/json; charset=UTF-8"
-    }})
-      .then(response => response.json())
-      .then(({ data }) => {
-        setData(data);
-        console.log(1111, data)
-      })
-    }, []);
-    
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <header className="App-header">
-        <p>
-        Yo Candidate!!! Reveal yourself 
-        </p>
-        <CandidateForm />
+        <Route 
+            exact
+            path='/'
+            render={() => <CandidateForm /> } />
+        <Route 
+            exact
+            path='/list'
+            render={() => <CandidatesList /> } />
         {/* <div>  
           {data.map(({ id, name, status }) => (
                     <div key={id}>
@@ -38,6 +29,8 @@ function App() {
         </div> */}
       </header>
     </div>
+    </Router>
+
   );
 }
 
