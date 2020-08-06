@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import './CandidateForm.css';
 
@@ -27,8 +27,6 @@ const useForm = (callback) =>  {
             console.log('error because', error);
           })
     }
-
-
     
     const handleSubmit = (event) => {
         if(event) {
